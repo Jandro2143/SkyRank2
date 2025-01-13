@@ -1,6 +1,7 @@
 import "../css/insights.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 export default function Insights() {
   const insights = [
@@ -52,7 +53,7 @@ export default function Insights() {
         <div className="insights-container">
           {insights.map((post, index) => (
             <div key={index} className="insight-card">
-              <img src={post.image} alt={post.title} />
+              <Image src={post.image} alt={post.title} />
               <div className="insight-details">
                 <p className="post-date">{post.date}</p>
                 <h3>{post.title}</h3>

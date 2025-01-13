@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import "../css/Services.css";
 
 export default function Services() {
@@ -8,10 +9,12 @@ export default function Services() {
       <div className="services-container">
         {/* Service 1 */}
         <div className="service-card">
-          <img
+          <Image
             src="/undraw_search-engines_k649.svg"
             alt="SEO Services"
             className="service-icon"
+            width={150}
+            height={150}
           />
           <h3>SEO Services</h3>
           <p>
@@ -25,10 +28,12 @@ export default function Services() {
 
         {/* Service 2 */}
         <div className="service-card">
-          <img
+          <Image
             src="/undraw_website_27ju.svg"
             alt="Website Building"
             className="service-icon"
+            width={150}
+            height={150}
           />
           <h3>Website Building</h3>
           <p>
@@ -42,10 +47,12 @@ export default function Services() {
 
         {/* Service 3 */}
         <div className="service-card">
-          <img
+          <Image
             src="/googlead.svg"
             alt="Google Ads"
             className="service-icon"
+            width={150}
+            height={150}
           />
           <h3>Google Ads</h3>
           <p>

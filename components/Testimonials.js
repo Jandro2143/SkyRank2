@@ -1,4 +1,5 @@
 import '../css/Testimonials.css';
+import Image from 'next/image';
 
 export default function Testimonials() {
   return (
@@ -15,12 +16,18 @@ export default function Testimonials() {
         {/* Testimonial 1 */}
         <div className="testimonial-card">
           <p className="testimonial-quote">
-            "I was struggling to rank my website, but this team completely turned it around! Their strategies
-            brought me more traffic and leads than ever before. Highly recommend!"
+            &quot;I was struggling to rank my website, but this team completely turned it around! Their strategies
+            brought me more traffic and leads than ever before. Highly recommend!&quot;
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <img src="/client1.jpg" alt="Client 1" className="testimonial-avatar" />
+            <Image
+              src="/client1.jpg"
+              alt="Client 1"
+              className="testimonial-avatar"
+              width={80}
+              height={80}
+            />
             <div>
               <h3>Jane Smith</h3>
               <p>Senior Developer</p>
@@ -31,12 +38,18 @@ export default function Testimonials() {
         {/* Testimonial 2 */}
         <div className="testimonial-card">
           <p className="testimonial-quote">
-            "The Google Ads campaigns brought instant results. Professional, responsive, and truly a pleasure
-            to work with!"
+            &quot;The Google Ads campaigns brought instant results. Professional, responsive, and truly a pleasure
+            to work with!&quot;
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <img src="/client2.jpg" alt="Client 2" className="testimonial-avatar" />
+            <Image
+              src="/client2.jpg"
+              alt="Client 2"
+              className="testimonial-avatar"
+              width={80}
+              height={80}
+            />
             <div>
               <h3>Tom Williams</h3>
               <p>Business Owner</p>
@@ -47,11 +60,17 @@ export default function Testimonials() {
         {/* Testimonial 3 */}
         <div className="testimonial-card">
           <p className="testimonial-quote">
-            "Amazing experience! The team helped optimize my website and our ROI has never been better."
+            &quot;Amazing experience! The team helped optimize my website and our ROI has never been better.&quot;
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <img src="/client3.jpg" alt="Client 3" className="testimonial-avatar" />
+            <Image
+              src="/client3.jpg"
+              alt="Client 3"
+              className="testimonial-avatar"
+              width={80}
+              height={80}
+            />
             <div>
               <h3>Michael Brown</h3>
               <p>CEO, StartUp Co.</p>
@@ -59,7 +78,6 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }

@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  images: {
+    domains: ['via.placeholder.com'], // Allow images from external domain
+  },
 };
 
 export default nextConfig;

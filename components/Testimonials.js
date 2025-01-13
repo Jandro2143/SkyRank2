@@ -4,7 +4,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section">
       <h2 className="section-title">
-        Testimonial<span className="highlight">s</span>
+        Customers Opinion<span className="highlight">s</span>
       </h2>
       <p className="testimonial-subtitle">
         Don&apos;t just take our word for it – see what our amazing clients have to say.

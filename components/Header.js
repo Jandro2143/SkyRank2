@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // New state for scrolling
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   // Scroll detection logic
   useEffect(() => {
@@ -24,11 +25,20 @@ export default function Header() {
       <div className="header-container">
         {/* Logo */}
         <Link href="/" className="logo">
-          <span className="logo-bold">Sky</span><span className="logo-bold2">Rank</span>
+          <span className="logo-bold">Sky</span>
+          <span className="logo-bold2">Rank</span>
         </Link>
 
+        {/* Menu Toggle for Mobile */}
+        <div
+          className="menu-toggle"
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        >
+          ☰
+        </div>
+
         {/* Navigation */}
-        <nav className="nav">
+        <nav className={`nav ${isNavOpen ? "active" : ""}`}>
           <ul className="nav-links">
             <li
               className="dropdown"
@@ -82,10 +92,10 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Buttons */}
-        <div className="header-buttons">
+        {/* Buttons for Desktop */}
+        <div className="header-buttons-desktop">
           <Link href="/contact" className="btn btn-primary">
-            Get Started 
+            Get Started
           </Link>
           <Link href="/SignIn" className="btn btn-outline">
             Sign In

@@ -52,7 +52,14 @@ export default function Insights() {
         <div className="insights-container">
           {insights.map((post, index) => (
             <div key={index} className="insight-card">
-              <Image src={post.image} alt={post.title} />
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={600} // Set width
+                height={400} // Set height
+                layout="intrinsic" // Maintain aspect ratio and intrinsic dimensions
+                priority={index === 0} // Prioritize loading the first image
+              />
               <div className="insight-details">
                 <p className="post-date">{post.date}</p>
                 <h3>{post.title}</h3>

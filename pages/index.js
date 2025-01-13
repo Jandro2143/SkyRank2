@@ -8,11 +8,7 @@ import { useState } from 'react';
 import ContactUs from '../components/ContactUs';
 
 export default function Home() {
-  const [openFAQ, setOpenFAQ] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
+  const [] = useState(null);
 
   return (
     <div>

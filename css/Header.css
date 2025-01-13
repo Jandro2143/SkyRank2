@@ -1,0 +1,201 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Header */
+.header {
+    background-color: rgba(28, 28, 28, 0.9);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Fix position to the top */
+    top: 0;
+    left: 0; /* Align header to the left */
+    right: 0; /* Align header to the right */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Include padding in width */
+    z-index: 1000; /* Keep header on top */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  /* Make the header semi-transparent when scrolling */
+.header.scrolled {
+    background-color: rgba(28, 28, 28, 0.97); /* More transparent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+  }
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 2rem; /* Space between logo and links */
+}
+
+.logo-bold {
+  color: #00C4CC;
+}
+
+/* Navigation */
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Center navigation links */
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Reduced spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Links */
+.nav-link {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.25rem; /* Adjust padding for larger hover effect */
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: -5px; /* Slightly larger hover square */
+  left: -5px;
+  width: calc(100% + 10px); /* Expand width */
+  height: calc(100% + 10px); /* Expand height */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent square */
+  border-radius: 12px; /* Rounder corners */
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::after {
+  transform: scale(1.05); /* Slightly larger effect */
+}
+
+.nav-link:hover {
+  color: #4CAF50; /* Highlighted text */
+  transform: translateY(-2px);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .nav-link {
+  padding-right: 1.5rem; /* Space for dropdown arrow */
+}
+
+.dropdown:hover .nav-link,
+.dropdown:focus-within .nav-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #4CAF50;
+}
+
+.dropdown .services-arrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .services-arrow {
+  transform: rotateX(180deg); /* Flip arrow */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2C2C2C;
+  border-radius: 12px;
+  padding: 1rem 0;
+  min-width: 200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #4CAF50;
+  color: #1C1C1C;
+  border-radius: 8px;
+}
+
+/* Header Buttons */
+.header-buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-left: auto; /* Push buttons to the far right */
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00C4CC;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #8A4FFF;
+}
+
+.btn-outline {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-outline:hover {
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+}

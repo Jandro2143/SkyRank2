@@ -1,0 +1,149 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Settings */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.about-hero {
+  background: #1C1C1C;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.about-hero .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.about-hero .hero-content p {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+/* Introduction Section */
+.about-introduction {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: left;
+}
+
+.about-introduction .intro-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-introduction strong {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Core Values Section */
+.about-values {
+  background-color: #f9fafb;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4CAF50;
+}
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Team Section */
+.about-team {
+  background: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}

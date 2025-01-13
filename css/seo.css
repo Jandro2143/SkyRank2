@@ -1,0 +1,237 @@
+/* Global Font Settings */
+body {
+    font-family: "Roboto", Arial, sans-serif; /* Modern, clean font */
+    line-height: 1.6;
+  }
+  
+
+/* Hero Section */
+.seo-hero {
+    background: #1C1C1C;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .seo-hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 65px;
+  }
+  
+  .seo-hero .hero-content p {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 1rem;
+  }
+  
+/* SEO Table Section */
+.seo-table-section {
+    margin: 4rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.table-title {
+    font-size: 3rem; /* Slightly larger title */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+/* Table Container */
+.table-container {
+    max-width: 1200px; /* Increased max-width */
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 0 1.5rem; /* Added padding for spacing */
+}
+
+/* Table Styling */
+.seo-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow for emphasis */
+    border-radius: 16px; /* Larger radius */
+    overflow: hidden;
+}
+
+.seo-table thead th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem; /* Larger heading text */
+    text-transform: uppercase;
+    padding: 1.2rem;
+}
+
+.seo-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.seo-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.seo-table tbody tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Table Data Cells */
+.seo-table td {
+    padding: 1.5rem; /* Increased padding for better spacing */
+    font-size: 1.1rem; /* Larger text */
+    color: #333;
+    text-align: center;
+}
+
+.seo-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    color: #444;
+}
+
+/* Icons for Checkmark and Dash */
+.seo-table .checkmark::before {
+    content: "\2713";
+    color: #4CAF50;
+    font-size: 1.8rem; /* Bigger checkmarks */
+    font-weight: bold;
+}
+
+.seo-table .dash::before {
+    content: "\2014"; /* Em Dash */
+    color: #bbb;
+    font-size: 1.4rem;
+}
+
+/* Highlight Columns */
+.seo-table th.basic {
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+.seo-table th.standard {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.seo-table th.advanced {
+    background-color: #e8f5e9;
+    color: #388E3C;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .seo-table td,
+    .seo-table th {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .seo-table td,
+    .seo-table th {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+  
+/* SEO Info Section */
+.seo-info-section {
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 1200px; /* Slightly wider for better layout */
+  text-align: center;
+}
+
+.seo-info-section h2,
+.seo-info-section h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature Cards Container */
+.seo-features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Feature Card Styling */
+.seo-feature-card {
+  background: #2C2C2C; /* Darker background to fit overall theme */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for better pop */
+  border: 1px solid #444444; /* Subtle outline for definition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left; /* Left-aligned text for cleaner appearance */
+}
+
+.seo-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(76, 175, 80, 0.4);
+}
+
+.seo-feature-card h4 {
+  font-size: 1.4rem; /* Larger text */
+  font-weight: 600;
+  color: #4CAF50;
+  margin-bottom: 0.75rem;
+}
+
+.seo-feature-card p {
+  font-size: 1.3rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+.seo-feature-icon {
+  font-size: 2.8rem; /* Slightly larger icon */
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  display: block; /* Ensures proper spacing */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .seo-features-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .seo-features-container {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
+
+/* SEO Introduction Section */
+.seo-introduction {
+    background-color: #ffffff; /* Matches hero and background theme */
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    text-align: left;
+    color: #000000;
+    max-width: 1400px; 
+    line-height: 1.8;
+    margin-bottom: -60px;
+  }
+  
+  .seo-introduction .intro-content p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .seo-introduction strong {
+    color: #4CAF50; /* Green highlight for company name */
+  }
+
+ 

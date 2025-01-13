@@ -1,0 +1,215 @@
+/* Google Ads Table Section */
+.googleads-table-section {
+    margin: 4rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.googleads-table-title {
+    font-size: 3rem; /* Match SEO table title */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+/* Table Container */
+.googleads-table-container {
+    max-width: 1200px; /* Match SEO max-width */
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 0 1.5rem;
+}
+
+/* Table Styling */
+.googleads-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    border-radius: 16px; /* Larger border radius */
+    overflow: hidden;
+}
+
+.googleads-table thead th {
+    background-color: #4CAF50; /* Main green header */
+    color: white;
+    font-size: 1.5rem; /* Larger font size */
+    text-transform: uppercase;
+    padding: 1.2rem;
+}
+
+/* Highlighted Column Headers */
+.googleads-table th.basic {
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+.googleads-table th.standard {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.googleads-table th.advanced {
+    background-color: #e8f5e9;
+    color: #388E3C;
+}
+
+/* Table Rows */
+.googleads-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.googleads-table tbody tr:nth-child(even) {
+    background-color: #f9fafb; /* Light gray for alternating rows */
+}
+
+.googleads-table tbody tr:hover {
+    background-color: #e8f5e9; /* Light green hover effect */
+}
+
+/* Table Cells */
+.googleads-table td {
+    padding: 1.5rem; /* Increased padding */
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+.googleads-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    color: #444;
+}
+
+/* Checkmarks and Dashes */
+.googleads-table .checkmark::before {
+    content: "\2713";
+    color: #4CAF50;
+    font-size: 1.8rem; /* Larger checkmark */
+    font-weight: bold;
+}
+
+.googleads-table .dash::before {
+    content: "\2014"; /* Em Dash */
+    color: #bbb;
+    font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .googleads-table td,
+    .googleads-table th {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .googleads-table td,
+    .googleads-table th {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Feature Cards Container */
+.googleads-features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.googleads-feature-card {
+    background: #2C2C2C;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444444;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.googleads-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(76, 175, 80, 0.6);
+}
+
+.googleads-feature-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 0.75rem;
+}
+
+.googleads-feature-card p {
+    font-size: 1.2rem;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.googleads-feature-icon {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .googleads-features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .googleads-features-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Header Section */
+.googleads-hero {
+    background: #1C1C1C;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.googleads-hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 65px;
+}
+
+.googleads-hero .hero-content p {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+/* Intro Section */
+.googleads-introduction {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.googleads-introduction strong {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.googleads-introduction .intro-content p {
+    font-size: 1.8rem; /* Larger font size */
+    margin-bottom: 1.5rem; /* Consistent spacing */
+    max-width: 100%;
+}

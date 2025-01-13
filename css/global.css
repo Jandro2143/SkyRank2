@@ -1,0 +1,196 @@
+/* Global Responsive Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Responsive Hero Sections */
+.hero-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Responsive Table */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table thead th {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.responsive-table td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.responsive-table .checkmark::before {
+    content: "\2713";
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Responsive Grid for Features */
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.feature-card {
+    background: #2C2C2C;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    color: #ffffff;
+}
+
+.feature-card h4 {
+    color: #4CAF50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #388E3C;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

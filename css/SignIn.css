@@ -1,0 +1,122 @@
+/* Sign-In Container */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00C4CC, #1C1C1C);
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Sign-In Form */
+  .signin-form {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Form Title */
+  .signin-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  /* Labels */
+  .form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input Fields */
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #00C4CC;
+    box-shadow: 0 4px 8px rgba(0, 196, 204, 0.2);
+  }
+  
+  /* Sign-In Button */
+  button[type="submit"] {
+    width: 100%;
+    background: #00C4CC;
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background: #009ba4;
+    transform: translateY(-2px);
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #ff4d4d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Success Message */
+  .success-message {
+    color: #4caf50;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Add Responsive Design */
+  @media (max-width: 768px) {
+    .signin-form {
+      padding: 2rem;
+      border-radius: 12px;
+    }
+  
+    .signin-form h2 {
+      font-size: 1.75rem;
+    }
+  
+    .form-group input {
+      padding: 0.7rem;
+      font-size: 0.95rem;
+    }
+  
+    button[type="submit"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+  

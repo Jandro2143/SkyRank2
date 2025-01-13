@@ -1,0 +1,102 @@
+/* GLOBAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center-align everything */
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh; /* Full viewport height */
+  background: #1B1B1B;
+  color: white;
+  text-align: center; /* Center the text */
+}
+
+.hero-content {
+  max-width: 800px; /* Limit the width of the text */
+  margin-bottom: 2rem; /* Add spacing between text and video */
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Dynamically adjust font size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.4rem); /* Dynamically adjust font size */
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  color: #cccccc;
+}
+
+.hero-content button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: white;
+  color: #00C4CC;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+  transform: scale(1.1);
+  background-color: #E8F5E9;
+}
+
+.hero-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video video {
+  width: 80%; /* Adjust the width */
+  max-width: 1500px; /* Add a max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+  border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-video video {
+    width: 100%;
+    max-width: 700px; /* Smaller max width for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .hero-content p {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+  }
+
+  .hero-video video {
+    max-width: 90%; /* Further reduce width for smaller screens */
+  }
+}

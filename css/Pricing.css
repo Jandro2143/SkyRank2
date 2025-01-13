@@ -1,0 +1,64 @@
+/* Header Section */
+.pricing-header {
+    background-color: #1C1C1C;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.pricing-header .section-title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+    color: #ffffff;
+}
+
+.pricing-header .pricing-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Tab Selector */
+.tab-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.tab-button {
+    padding: 0.75rem 2rem;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border-color: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tab-selector {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .tab-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+    }
+}

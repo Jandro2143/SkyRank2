@@ -1,0 +1,351 @@
+/* Web Development Table Section */
+.webdev-table-section {
+    margin: 4rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.webdev-table-title {
+    font-size: 3rem; /* Match SEO table title */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2.5rem;
+}
+
+/* Table Container */
+.webdev-table-container {
+    max-width: 1200px; /* Match SEO max-width */
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 0 1.5rem;
+}
+
+/* Table Styling */
+.webdev-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    border-radius: 16px; /* Larger border radius */
+    overflow: hidden;
+}
+
+.webdev-table thead th {
+    background-color: #00C4CC; /* Main green header */
+    color: white;
+    font-size: 1.5rem; /* Larger font size */
+    text-transform: uppercase;
+    padding: 1.2rem;
+}
+
+/* Highlighted Column Headers */
+.webdev-table th.basic {
+    background-color: #e1f5fe;
+    color: #0277bd;
+}
+
+.webdev-table th.standard {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.webdev-table th.advanced {
+    background-color: #e8f5e9;
+    color: #388E3C;
+}
+
+/* Table Rows */
+.webdev-table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.webdev-table tbody tr:nth-child(even) {
+    background-color: #f9fafb; /* Light gray for alternating rows */
+}
+
+.webdev-table tbody tr:hover {
+    background-color: #e8f5e9; /* Light green hover effect */
+}
+
+/* Table Cells */
+.webdev-table td {
+    padding: 1.5rem; /* Increased padding */
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+.webdev-table td:first-child {
+    text-align: left;
+    font-weight: 700;
+    color: #444;
+}
+
+/* Checkmarks and Dashes */
+.webdev-table .checkmark::before {
+    content: "\2713";
+    color: #0277bd;
+    font-size: 1.8rem; /* Larger checkmark */
+    font-weight: bold;
+}
+
+.webdev-table .dash::before {
+    content: "\2014"; /* Em Dash */
+    color: #bbb;
+    font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .webdev-table td,
+    .webdev-table th {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .webdev-table td,
+    .webdev-table th {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Feature Cards Container */
+.webdev-features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px; /* Add 3D perspective for hover effects */
+}
+
+.webdev-feature-card {
+    background: linear-gradient(135deg, #00C4CC, #005A64);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #005A64;
+    text-align: left;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.webdev-feature-card:hover {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05); /* 3D hover effect */
+    box-shadow: 0 20px 40px rgba(0, 196, 204, 0.8);
+    background: linear-gradient(135deg, #005A64, #00C4CC); /* Swap gradient on hover */
+}
+
+/* Adding a fun glowing effect */
+.webdev-feature-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 196, 204, 0.2), transparent);
+    transform: rotate(45deg);
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.webdev-feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Feature Cards Container */
+.webdev-features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 800px; /* Slight 3D perspective */
+}
+
+.webdev-feature-card {
+    background: linear-gradient(135deg, #00C4CC, #005A64);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.webdev-feature-card:hover {
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 196, 204, 0.6);
+}
+
+/* Subtle Glow Effect */
+.webdev-feature-card::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(0, 196, 204, 0.1), transparent);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: -1;
+}
+
+.webdev-feature-card:hover::before {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Feature Cards Container */
+.webdev-features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Feature Card Styling */
+.webdev-feature-card {
+    background: #2C2C2C; /* Fixed neutral dark background */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Standard shadow */
+    border: 2px solid transparent; /* Transparent border initially */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.webdev-feature-card:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 12px 30px rgba(0, 196, 204, 0.6); /* Glowing border */
+    border-color: rgba(0, 196, 204, 1); /* Aqua-blue outline */
+}
+
+/* Explicitly Prevent Background Color Change */
+.webdev-feature-card:hover {
+    background: #2C2C2C; /* Ensure background remains the same */
+}
+
+/* Card Title */
+.webdev-feature-card h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff; /* Bright white text */
+    margin-bottom: 1rem;
+}
+
+/* Card Description */
+.webdev-feature-card p {
+    font-size: 1.1rem;
+    color: #cccccc; /* Lighter gray text */
+    line-height: 1.6;
+}
+
+/* Icon Styling */
+.webdev-feature-icon {
+    font-size: 2.8rem;
+    color: #00C4CC; /* Aqua-blue icon color */
+    margin-bottom: 1rem;
+    display: block;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px); /* Gentle bounce */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .webdev-features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .webdev-features-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Header Section */
+.webdev-hero {
+    background: #1C1C1C;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.webdev-hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 65px;
+}
+
+.webdev-hero .hero-content p {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    line-height: 1.8;
+}
+
+/* Intro Section */
+.webdev-intro {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.webdev-intro strong {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+/* Web Development Introduction Section */
+.webdev-introduction {
+    background-color: #ffffff; /* Matches hero and background theme */
+    padding: 3rem 2rem; /* Same padding */
+    margin: 0 auto;
+    text-align: left;
+    color: #000000;
+    max-width: 1400px; /* Set max width */
+    line-height: 1.8; /* Improved readability */
+    margin-bottom: -60px; /* Matches SEO margin */
+}
+
+.webdev-introduction .intro-content p {
+    font-size: 1.8rem; /* Larger font size */
+    margin-bottom: 1.5rem; /* Consistent spacing */
+    max-width: 100%;
+}
+
+.webdev-introduction strong {
+    color: #4CAF50; /* Green highlight for company name */
+}
+

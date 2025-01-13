@@ -1,0 +1,124 @@
+/* Testimonials Section */
+.testimonials-section {
+  background-color: #FFFFFF; /* Softer background */
+  color: #1C1C1C; /* Darker text for contrast */
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 3.5rem; /* Larger and bolder title */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1C1C1C;
+}
+
+.testimonials-section .highlight {
+  color: #00C4CC; /* Eye-catching color for emphasis */
+}
+
+.testimonial-subtitle {
+  font-size: 1.25rem;
+  color: #6C757D; /* Subtle grey for subtitle */
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem; /* Increase spacing between cards */
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #FFFFFF; /* White background for card */
+  padding: 2.5rem;
+  border-radius: 16px;
+  max-width: 400px; /* Slightly larger cards */
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Add more hover lift */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  color: #495057;
+  margin-bottom: 1.5rem;
+  font-style: italic; /* Highlight the quote */
+  line-height: 1.7;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.testimonial-quote::before {
+  content: "“";
+  font-size: 2rem;
+  color: #00C4CC;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+/* Star Rating */
+.star-rating {
+  color: #FFC107; /* Gold stars for better visibility */
+  font-size: 1.5rem; /* Larger stars */
+  margin-bottom: 1rem;
+}
+
+/* Testimonial Info */
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.testimonial-avatar {
+  width: 60px; /* Larger avatar */
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00C4CC; /* Border for emphasis */
+}
+
+.testimonial-info h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.testimonial-info p {
+  font-size: 0.95rem;
+  color: #6C757D;
+  margin: 0;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    gap: 2rem; /* Adjust spacing for smaller screens */
+  }
+
+  .testimonial-card {
+    max-width: 100%; /* Take full width */
+  }
+
+  .testimonial-avatar {
+    width: 50px;
+    height: 50px;
+  }
+}

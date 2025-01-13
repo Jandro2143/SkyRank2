@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../css/FAQ.css';
 
 export default function FAQ() {
   const [openFAQ, setOpenFAQ] = useState(null);

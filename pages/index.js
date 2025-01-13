@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../css/index.css';
 import FAQ from '../components/FAQ';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';

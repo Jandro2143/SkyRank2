@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import "../css/Services.css";
+
 
 export default function Services() {
   return (

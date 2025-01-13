@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/pricing-cards.css"; // Shared CSS file for pricing cards
+
 
 export default function PricingCards({ title, plans }) {
   return (

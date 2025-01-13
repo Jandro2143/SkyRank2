@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import '../css/SignIn.css'; // Ensure the CSS file exists and is imported
 
 export default function SignIn() {
   const [email, setEmail] = useState('');

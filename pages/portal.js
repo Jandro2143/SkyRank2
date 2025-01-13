@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header"; // Import your Header component
-import "../css/portal.css"; // Updated CSS file
 
 export default function Portal() {
   const [clients, setClients] = useState([]);

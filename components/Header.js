@@ -1,5 +1,4 @@
 import Link from "next/link";
-import '../css/Header.css';
 import { useState, useEffect } from "react";
 
 export default function Header() {

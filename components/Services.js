@@ -15,7 +15,7 @@ export default function Services() {
           />
           <h3>SEO Services</h3>
           <p>
-            Boost your website’s traffic and search engine rankings with
+            Boost your website&apos;s traffic and search engine rankings with
             customized, data-driven SEO strategies.
           </p>
           <Link href="/services/seo" passHref>

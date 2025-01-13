@@ -101,7 +101,7 @@ export default function WebDevelopment() {
         <div className="hero-content">
           <h1>Professional Web Development Services</h1>
           <p>
-            Build stunning, responsive websites tailored to your brand and goals. Whether it's custom designs,
+            Build stunning, responsive websites tailored to your brand and goals. Whether it&apos;s custom designs,
             e-commerce solutions, or optimized performance, we have the expertise to bring your vision to life.
           </p>
         </div>

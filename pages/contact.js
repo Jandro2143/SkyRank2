@@ -12,7 +12,7 @@ export default function Contact() {
       <section className="contact-hero">
         <div className="hero-content">
           <h1>Contact Us</h1>
-          <p>We’d love to hear from you! Reach out today to discuss your needs.</p>
+          <p>We&apos;d love to hear from you! Reach out today to discuss your needs.</p>
         </div>
       </section>
 
@@ -20,7 +20,7 @@ export default function Contact() {
       <section className="contact-form-section">
         <div className="contact-container">
           <h2>Get in Touch</h2>
-          <p>Fill out the form below, and we’ll get back to you as soon as possible.</p>
+          <p>Fill out the form below, and we&apos;ll get back to you as soon as possible.</p>
           <form className="contact-form">
             {/* Company Name */}
             <div className="form-group">

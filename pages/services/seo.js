@@ -105,7 +105,7 @@ export default function Seo() {
         <div className="hero-content">
           <h1>SEO Services That Drive Results</h1>
           <p>
-            Improve your website's visibility, rank higher on search engines, and attract the right audience with
+            Improve your website&apos;s visibility, rank higher on search engines, and attract the right audience with
             our tailored SEO strategies.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function Seo() {
             and increasing visibility to your target audience.
           </p>
           <p>
-            Whether you're a small business or a large enterprise, our SEO tiers are designed to deliver measurable 
+            Whether you&apos;re a small business or a large enterprise, our SEO tiers are designed to deliver measurable 
             results. From keyword research to on-page optimization and competitor analysis, we’ll help you outshine 
             competitors and achieve sustainable growth.
           </p>

@@ -7,7 +7,7 @@ export default function Testimonials() {
         Testimonial<span className="highlight">s</span>
       </h2>
       <p className="testimonial-subtitle">
-        Don’t just take our word for it – see what our amazing clients have to say.
+        Don&apos;t just take our word for it – see what our amazing clients have to say.
       </p>
 
       {/* Testimonials Container */}

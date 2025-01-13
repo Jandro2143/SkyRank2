@@ -24,7 +24,7 @@ export default function About() {
           <p>
             At <strong>SkyRank</strong>, we are passionate about delivering exceptional digital services.
             Our team is dedicated to creating innovative solutions that help businesses thrive online. 
-            Whether it's building stunning websites, optimizing SEO, or running high-performance ad campaigns,
+            Whether it&apos;s building stunning websites, optimizing SEO, or running high-performance ad campaigns,
             we are your trusted partner for success.
           </p>
           <p>

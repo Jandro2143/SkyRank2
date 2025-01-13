@@ -10,7 +10,7 @@ export default function ContactUs() {
             Ready to Take Your Business to the Next Level?
           </h2>
           <p className="contact-description">
-            Get in touch with us today and let’s create a tailored solution to grow your business. 
+            Get in touch with us today and let&apos;s create a tailored solution to grow your business. 
             Our team is ready to help you succeed with expert strategies and insights.
           </p>
           <Link href="/contact">

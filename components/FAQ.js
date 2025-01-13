@@ -22,7 +22,7 @@ export default function FAQ() {
           </button>
           <div className="faq-answer">
             <p>
-              SEO (Search Engine Optimization) improves your website's visibility
+              SEO (Search Engine Optimization) improves your website&apos;s visibility
               on search engines like Google, helping you attract more organic traffic.
             </p>
           </div>

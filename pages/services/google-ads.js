@@ -112,7 +112,7 @@ export default function GoogleAds() {
         <div className="intro-content">
           <p>
             At <strong>WeRocket</strong>, we specialize in managing Google Ads campaigns that deliver real results.
-            Whether you're looking to launch a small campaign or scale your advertising efforts, our expertise
+            Whether you&apos;re looking to launch a small campaign or scale your advertising efforts, our expertise
             ensures your ads perform at their best.
           </p>
           <p>

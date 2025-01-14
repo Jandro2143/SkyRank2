@@ -1,13 +1,48 @@
+import { useState } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    company: '',
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending your message...');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Message sent successfully! We will get back to you soon.');
+        setFormData({ company: '', name: '', email: '', phone: '', message: '' });
+      } else {
+        const errorData = await response.json();
+        setStatus(`Failed to send message: ${errorData.message || 'Please try again.'}`);
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setStatus('An error occurred while sending your message. Please try again later.');
+    }
+  };
+
   return (
     <div>
-      {/* Header */}
       <Header />
-
-      {/* Contact Hero Section */}
       <section className="contact-hero">
         <div className="hero-content">
           <h1>Contact Us</h1>
@@ -15,13 +50,11 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="contact-form-section">
         <div className="contact-container">
           <h2>Get in Touch</h2>
           <p>Fill out the form below, and we&apos;ll get back to you as soon as possible.</p>
-          <form className="contact-form">
-            {/* Company Name */}
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="company">Company Name</label>
               <input
@@ -29,11 +62,11 @@ export default function Contact() {
                 id="company"
                 name="company"
                 placeholder="Your Company Name"
+                value={formData.company}
+                onChange={handleChange}
                 required
               />
             </div>
-
-            {/* Name */}
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input
@@ -41,11 +74,11 @@ export default function Contact() {
                 id="name"
                 name="name"
                 placeholder="Your Full Name"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
             </div>
-
-            {/* Email */}
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -53,11 +86,11 @@ export default function Contact() {
                 id="email"
                 name="email"
                 placeholder="Your Email Address"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
-
-            {/* Phone Number */}
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
               <input
@@ -65,11 +98,11 @@ export default function Contact() {
                 id="phone"
                 name="phone"
                 placeholder="Your Phone Number"
+                value={formData.phone}
+                onChange={handleChange}
                 required
               />
             </div>
-
-            {/* Message */}
             <div className="form-group">
               <label htmlFor="message">How can we help?</label>
               <textarea
@@ -77,19 +110,18 @@ export default function Contact() {
                 name="message"
                 rows="5"
                 placeholder="Tell us your requirements"
+                value={formData.message}
+                onChange={handleChange}
                 required
               ></textarea>
             </div>
-
-            {/* Submit Button */}
             <button type="submit" className="cta-button">
               Send Message
             </button>
           </form>
+          {status && <p className="status-message">{status}</p>}
         </div>
       </section>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

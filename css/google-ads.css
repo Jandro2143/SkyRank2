@@ -1,215 +1,252 @@
-/* Google Ads Table Section */
-.googleads-table-section {
+/* Global Font Settings */
+body {
+    font-family: "Roboto", Arial, sans-serif; /* Modern, clean font */
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .googleads-hero {
+    background: #1C1C1C;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 0 auto; /* Center parent itself */
+  }
+  
+  .googleads-hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 50px; /* Updated margin for consistency */
+  }
+  
+  .googleads-hero .hero-content p {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    line-height: 1.8; /* Ensure proper spacing */
+    text-align: center;
+  }
+  
+  /* Google Ads Table Section */
+  .googleads-table-section {
     margin: 4rem auto;
     text-align: center;
     padding: 2rem;
-}
-
-.googleads-table-title {
-    font-size: 3rem; /* Match SEO table title */
+  }
+  
+  .googleads-table-title {
+    font-size: 3rem; /* Updated title font size */
     font-weight: 700;
     color: #333;
     margin-bottom: 2.5rem;
-}
-
-/* Table Container */
-.googleads-table-container {
-    max-width: 1200px; /* Match SEO max-width */
+  }
+  
+  /* Table Container */
+  .googleads-table-container {
+    max-width: 1200px;
     margin: 0 auto;
     overflow-x: auto;
     padding: 0 1.5rem;
-}
-
-/* Table Styling */
-.googleads-table {
+  }
+  
+  /* Table Styling */
+  .googleads-table {
     width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow */
-    border-radius: 16px; /* Larger border radius */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
     overflow: hidden;
-}
-
-.googleads-table thead th {
-    background-color: #4CAF50; /* Main green header */
+  }
+  
+  .googleads-table thead th {
+    background-color: #00C4CC; /* Matched gradient styling */
     color: white;
-    font-size: 1.5rem; /* Larger font size */
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 1.2rem;
-}
-
-/* Highlighted Column Headers */
-.googleads-table th.basic {
+  }
+  
+  /* Highlight Columns */
+  .googleads-table th.basic {
     background-color: #e1f5fe;
     color: #0277bd;
-}
-
-.googleads-table th.standard {
+  }
+  
+  .googleads-table th.standard {
     background-color: #fff3e0;
     color: #ef6c00;
-}
-
-.googleads-table th.advanced {
+  }
+  
+  .googleads-table th.advanced {
     background-color: #e8f5e9;
     color: #388E3C;
-}
-
-/* Table Rows */
-.googleads-table tbody tr {
+  }
+  
+  /* Table Rows */
+  .googleads-table tbody tr {
     background-color: #fff;
     transition: background-color 0.3s ease;
-}
-
-.googleads-table tbody tr:nth-child(even) {
-    background-color: #f9fafb; /* Light gray for alternating rows */
-}
-
-.googleads-table tbody tr:hover {
-    background-color: #e8f5e9; /* Light green hover effect */
-}
-
-/* Table Cells */
-.googleads-table td {
-    padding: 1.5rem; /* Increased padding */
+  }
+  
+  .googleads-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .googleads-table tbody tr:hover {
+    background-color: #e8f5e9;
+  }
+  
+  /* Table Data Cells */
+  .googleads-table td {
+    padding: 1.5rem;
     font-size: 1.1rem;
     color: #333;
     text-align: center;
-}
-
-.googleads-table td:first-child {
+  }
+  
+  .googleads-table td:first-child {
     text-align: left;
     font-weight: 700;
     color: #444;
-}
-
-/* Checkmarks and Dashes */
-.googleads-table .checkmark::before {
+  }
+  
+  /* Icons for Checkmark and Dash */
+  .googleads-table .checkmark::before {
     content: "\2713";
-    color: #4CAF50;
-    font-size: 1.8rem; /* Larger checkmark */
+    color: #0277bd;
+    font-size: 1.8rem;
     font-weight: bold;
-}
-
-.googleads-table .dash::before {
-    content: "\2014"; /* Em Dash */
+  }
+  
+  .googleads-table .dash::before {
+    content: "\2014";
     color: #bbb;
     font-size: 1.4rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .googleads-table td,
     .googleads-table th {
-        font-size: 1rem;
-        padding: 1rem;
+      font-size: 1rem;
+      padding: 1rem;
     }
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .googleads-table td,
     .googleads-table th {
-        font-size: 0.9rem;
-        padding: 0.75rem;
+      font-size: 0.9rem;
+      padding: 0.75rem;
     }
-}
-
-/* Feature Cards Container */
-.googleads-features-container {
+  }
+  
+  /* Google Ads Feature Cards Container */
+  .googleads-features-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.googleads-feature-card {
-    background: #2C2C2C;
+    perspective: 1000px; /* Add 3D perspective for hover effects */
+  }
+  
+  /* Google Ads Feature Card Styling */
+  .googleads-feature-card {
+    background: #2C2C2C; /* Match Web Development's background color */
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
-    border: 1px solid #444444;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Standard shadow */
+    border: 2px solid transparent; /* Transparent border initially */
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.googleads-feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(76, 175, 80, 0.6);
-}
-
-.googleads-feature-card h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #4CAF50;
-    margin-bottom: 0.75rem;
-}
-
-.googleads-feature-card p {
-    font-size: 1.2rem;
-    color: #dddddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Effects */
+  .googleads-feature-card:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 12px 30px rgba(0, 196, 204, 0.6); /* Glowing border */
+    border-color: rgba(0, 196, 204, 1); /* Aqua-blue outline */
+  }
+  
+  /* Explicitly Prevent Background Color Change */
+  .googleads-feature-card:hover {
+    background: #2C2C2C; /* Ensure background remains the same */
+  }
+  
+  /* Card Title */
+  .googleads-feature-card h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff; /* Bright white text */
+    margin-bottom: 1rem;
+  }
+  
+  /* Card Description */
+  .googleads-feature-card p {
+    font-size: 1.1rem;
+    color: #cccccc; /* Lighter gray text */
     line-height: 1.6;
-}
-
-.googleads-feature-icon {
-    font-size: 3rem;
-    color: #4CAF50;
+  }
+  
+  /* Icon Styling */
+  .googleads-feature-icon {
+    font-size: 2.8rem;
+    color: #00C4CC; /* Aqua-blue icon color */
     margin-bottom: 1rem;
     display: block;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .googleads-features-container {
-        grid-template-columns: repeat(2, 1fr);
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
     }
-}
-
-@media (max-width: 600px) {
-    .googleads-features-container {
-        grid-template-columns: 1fr;
+    50% {
+      transform: translateY(-8px); /* Gentle bounce */
     }
-}
-
-/* Header Section */
-.googleads-hero {
-    background: #1C1C1C;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.googleads-hero .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 65px;
-}
-
-.googleads-hero .hero-content p {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-top: 1rem;
-    line-height: 1.8;
-}
-
-/* Intro Section */
-.googleads-introduction {
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .googleads-features-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .googleads-features-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Google Ads Introduction Section */
+  .googleads-introduction {
     background-color: #ffffff;
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 2rem;
+    padding: 3rem 2rem;
+    margin: 0 auto;
     text-align: left;
-    font-size: 1.2rem;
+    color: #000000;
+    max-width: 1400px;
     line-height: 1.8;
-    color: #333;
-}
-
-.googleads-introduction strong {
-    color: #4CAF50;
-    font-weight: 700;
-}
-
-.googleads-introduction .intro-content p {
-    font-size: 1.8rem; /* Larger font size */
-    margin-bottom: 1.5rem; /* Consistent spacing */
+    margin-bottom: -60px;
+  }
+  
+  .googleads-introduction .intro-content p {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
     max-width: 100%;
-}
+  }
+  
+  .googleads-introduction strong {
+    color: #4CAF50;
+  }
+  

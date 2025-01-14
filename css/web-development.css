@@ -294,20 +294,27 @@
     background: #1C1C1C;
     text-align: center;
     padding: 4rem 2rem;
+    margin: 0 auto; /* Center parent itself, if necessary */
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center if height is constrained */
 }
 
 .webdev-hero .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 65px;
+    margin: 0 auto; /* Remove conflicting block margins */
+    text-align: center; /* Ensure the text is centered */
+    display: block; /* Explicitly set block display */
+    margin-top: 50px;
 }
+
 
 .webdev-hero .hero-content p {
     font-size: 1.4rem;
     color: #ffffff;
     margin-top: 1rem;
     line-height: 1.8;
+    text-align: center;
 }
 
 /* Intro Section */
@@ -316,7 +323,7 @@
     max-width: 1200px;
     margin: 3rem auto;
     padding: 2rem;
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     line-height: 1.8;
     color: #333;
@@ -337,6 +344,7 @@
     max-width: 1400px; /* Set max width */
     line-height: 1.8; /* Improved readability */
     margin-bottom: -60px; /* Matches SEO margin */
+    
 }
 
 .webdev-introduction .intro-content p {

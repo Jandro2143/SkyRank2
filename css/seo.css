@@ -1,237 +1,253 @@
 /* Global Font Settings */
 body {
-    font-family: "Roboto", Arial, sans-serif; /* Modern, clean font */
-    line-height: 1.6;
-  }
-  
+  font-family: "Roboto", Arial, sans-serif; /* Modern, clean font */
+  line-height: 1.6;
+}
 
 /* Hero Section */
 .seo-hero {
-    background: #1C1C1C;
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .seo-hero .hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 65px;
-  }
-  
-  .seo-hero .hero-content p {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-top: 1rem;
-  }
-  
+  background: #1C1C1C;
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  text-align: center;
+  padding: 4rem 2rem;
+  margin: 0 auto; /* Center parent itself */
+}
+
+.seo-hero .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 50px; /* Updated margin for consistency */
+}
+
+.seo-hero .hero-content p {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  line-height: 1.8; /* Ensure proper spacing */
+  text-align: center;
+}
+
 /* SEO Table Section */
 .seo-table-section {
-    margin: 4rem auto;
-    text-align: center;
-    padding: 2rem;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 2rem;
 }
 
 .table-title {
-    font-size: 3rem; /* Slightly larger title */
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 2.5rem;
+  font-size: 3rem; /* Updated title font size */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2.5rem;
 }
 
 /* Table Container */
 .table-container {
-    max-width: 1200px; /* Increased max-width */
-    margin: 0 auto;
-    overflow-x: auto;
-    padding: 0 1.5rem; /* Added padding for spacing */
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 0 1.5rem;
 }
 
 /* Table Styling */
 .seo-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow for emphasis */
-    border-radius: 16px; /* Larger radius */
-    overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .seo-table thead th {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.5rem; /* Larger heading text */
-    text-transform: uppercase;
-    padding: 1.2rem;
-}
-
-.seo-table tbody tr {
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-}
-
-.seo-table tbody tr:nth-child(even) {
-    background-color: #f9fafb;
-}
-
-.seo-table tbody tr:hover {
-    background-color: #e8f5e9;
-}
-
-/* Table Data Cells */
-.seo-table td {
-    padding: 1.5rem; /* Increased padding for better spacing */
-    font-size: 1.1rem; /* Larger text */
-    color: #333;
-    text-align: center;
-}
-
-.seo-table td:first-child {
-    text-align: left;
-    font-weight: 700;
-    color: #444;
-}
-
-/* Icons for Checkmark and Dash */
-.seo-table .checkmark::before {
-    content: "\2713";
-    color: #4CAF50;
-    font-size: 1.8rem; /* Bigger checkmarks */
-    font-weight: bold;
-}
-
-.seo-table .dash::before {
-    content: "\2014"; /* Em Dash */
-    color: #bbb;
-    font-size: 1.4rem;
+  background-color: #00C4CC; /* Matched gradient styling */
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.2rem;
 }
 
 /* Highlight Columns */
 .seo-table th.basic {
-    background-color: #e1f5fe;
-    color: #0277bd;
+  background-color: #e1f5fe;
+  color: #0277bd;
 }
 
 .seo-table th.standard {
-    background-color: #fff3e0;
-    color: #ef6c00;
+  background-color: #fff3e0;
+  color: #ef6c00;
 }
 
 .seo-table th.advanced {
-    background-color: #e8f5e9;
-    color: #388E3C;
+  background-color: #e8f5e9;
+  color: #388E3C;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .seo-table td,
-    .seo-table th {
-        font-size: 1rem;
-        padding: 1rem;
-    }
+/* Table Rows */
+.seo-table tbody tr {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .seo-table td,
-    .seo-table th {
-        font-size: 0.9rem;
-        padding: 0.75rem;
-    }
+.seo-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
 }
 
-  
-/* SEO Info Section */
-.seo-info-section {
-  margin: 4rem auto;
-  padding: 2rem;
-  max-width: 1200px; /* Slightly wider for better layout */
+.seo-table tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+/* Table Data Cells */
+.seo-table td {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
   text-align: center;
 }
 
-.seo-info-section h2,
-.seo-info-section h3 {
-  font-size: 2.5rem;
+.seo-table td:first-child {
+  text-align: left;
   font-weight: 700;
-  color: #000000;
-  margin-bottom: 1.5rem;
+  color: #444;
 }
 
-/* Feature Cards Container */
+/* Icons for Checkmark and Dash */
+.seo-table .checkmark::before {
+  content: "\2713";
+  color: #0277bd;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.seo-table .dash::before {
+  content: "\2014";
+  color: #bbb;
+  font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seo-table td,
+  .seo-table th {
+      font-size: 1rem;
+      padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .seo-table td,
+  .seo-table th {
+      font-size: 0.9rem;
+      padding: 0.75rem;
+  }
+}
+
+/* SEO Feature Cards Container */
 .seo-features-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  perspective: 1000px; /* Add 3D perspective for hover effects */
 }
 
-/* Feature Card Styling */
+/* SEO Feature Card Styling */
 .seo-feature-card {
-  background: #2C2C2C; /* Darker background to fit overall theme */
+  background: #2C2C2C; /* Match Web Development's background color */
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for better pop */
-  border: 1px solid #444444; /* Subtle outline for definition */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left; /* Left-aligned text for cleaner appearance */
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Standard shadow */
+  border: 2px solid transparent; /* Transparent border initially */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover Effects */
 .seo-feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(76, 175, 80, 0.4);
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 12px 30px rgba(0, 196, 204, 0.6); /* Glowing border */
+  border-color: rgba(0, 196, 204, 1); /* Aqua-blue outline */
 }
 
+/* Explicitly Prevent Background Color Change */
+.seo-feature-card:hover {
+  background: #2C2C2C; /* Ensure background remains the same */
+}
+
+/* Card Title */
 .seo-feature-card h4 {
-  font-size: 1.4rem; /* Larger text */
-  font-weight: 600;
-  color: #4CAF50;
-  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff; /* Bright white text */
+  margin-bottom: 1rem;
 }
 
+/* Card Description */
 .seo-feature-card p {
-  font-size: 1.3rem;
-  color: #dddddd;
+  font-size: 1.1rem;
+  color: #cccccc; /* Lighter gray text */
   line-height: 1.6;
 }
 
+/* Icon Styling */
 .seo-feature-icon {
-  font-size: 2.8rem; /* Slightly larger icon */
-  color: #4CAF50;
+  font-size: 2.8rem;
+  color: #00C4CC; /* Aqua-blue icon color */
   margin-bottom: 1rem;
-  display: block; /* Ensures proper spacing */
+  display: block;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-8px); /* Gentle bounce */
+  }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
   .seo-features-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+      grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   .seo-features-container {
-    grid-template-columns: 1fr; /* 1 card per row on small screens */
+      grid-template-columns: 1fr;
   }
 }
 
+
 /* SEO Introduction Section */
 .seo-introduction {
-    background-color: #ffffff; /* Matches hero and background theme */
-    padding: 3rem 2rem;
-    margin: 0 auto;
-    text-align: left;
-    color: #000000;
-    max-width: 1400px; 
-    line-height: 1.8;
-    margin-bottom: -60px;
-  }
-  
-  .seo-introduction .intro-content p {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    max-width: 100%;
-  }
-  
-  .seo-introduction strong {
-    color: #4CAF50; /* Green highlight for company name */
-  }
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  text-align: left;
+  color: #000000;
+  max-width: 1400px;
+  line-height: 1.8;
+  margin-bottom: -60px;
+}
 
- 
+.seo-introduction .intro-content p {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+
+.seo-introduction strong {
+  color: #4CAF50;
+}
+

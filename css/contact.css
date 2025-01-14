@@ -1,6 +1,10 @@
 /* Contact Hero Section */
 .contact-hero {
     background-color: #1C1C1C;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center if height is constrained */
     text-align: center;
     color: #ffffff;
     padding: 4rem 2rem;
@@ -119,5 +123,13 @@
     .contact-container h2 {
       font-size: 2rem;
     }
+  }
+  
+  .status-message {
+    margin-top: 1rem;
+    color: #4CAF50; /* Green for success */
+  }
+  .status-message.error {
+    color: #FF0000; /* Red for errors */
   }
   

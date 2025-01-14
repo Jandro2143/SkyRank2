@@ -1,6 +1,10 @@
 /* Hero Section */
 .our-work-hero {
     background: #1C1C1C;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center if height is constrained */
     text-align: center;
     padding: 4rem 2rem;
     color: #ffffff;

@@ -10,7 +10,7 @@ export default function Footer() {
           <h3>SkyRank</h3>
           <p>Your trusted partner for SEO and Google Ads services.</p>
           <p>
-            <a href="mailto:info@skyrank.com">info@skyrank.com</a>
+            <a href="mailto:info@skyrank.com">info@skyrank.au</a>
           </p>
         </div>
 

@@ -6,11 +6,11 @@ export default async function handler(req, res) {
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
-      host: 'smtp.your-email-provider.com', // e.g., Gmail, Outlook, or your hosting's SMTP
+      host: 'smtp.gmail.com', // e.g., Gmail, Outlook, or your hosting's SMTP
       port: 587,
       secure: false,
       auth: {
-        user: 'alex.cedillo.e@gmail.com', // Replace with your email
+        user: 'info@skyrank.au', // Replace with your email
         pass: 'Chop2143Chop', // Replace with your email password or app password
       },
     });
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       // Send the email
       await transporter.sendMail({
         from: email, // User's email
-        to: 'alex.cedillo.e@gmail.com', // Your business email
+        to: 'info@skyrank.au', // Your business email
         subject: `New Contact Form Submission from ${name}`,
         html: `
           <p><strong>Company Name:</strong> ${company}</p>

@@ -1,40 +1,71 @@
-import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header"; // Import your Header component
+import Header from "../../components/Header"; // Adjust path as needed
 
-export default function Portal() {
+export default function PortalPage() {
+  const router = useRouter();
+  const { uniqueId } = router.query; // Get the uniqueId from the URL
   const [clients, setClients] = useState([]);
   const [filteredClients, setFilteredClients] = useState([]);
-  const [selectedTab, setSelectedTab] = useState("all"); // For tab selection
+  const [selectedTab, setSelectedTab] = useState("all");
+  const [isValidUser, setIsValidUser] = useState(false); // Check if the uniqueId is valid
+  const [loading, setLoading] = useState(true); // Manage loading state
 
-  // Define the valid statuses here so they are accessible throughout the component
   const validStatuses = ["To Do", "In Progress", "Done", "Follow Up"];
 
   useEffect(() => {
-    const fetchClients = async () => {
+    if (!uniqueId) return; // Wait until uniqueId is available
+
+    const validateUserAndFetchClients = async () => {
       try {
         const AIRTABLE_BASE = "appjBE1cS049PHpg6"; // Replace with your Base ID
-        const AIRTABLE_TABLE = "Clients"; // Replace with your Table Name
+        const AIRTABLE_USERS_TABLE = "User"; // Replace with your User Table Name
+        const AIRTABLE_CLIENTS_TABLE = "Clients"; // Replace with your Clients Table Name
         const AIRTABLE_API_KEY =
           "patu3ckkjrFVR855b.cfa6221346f5cc550a8d144f015ff8645ff0347e7dfb475ae3f852e139356223"; // Replace with your API Key
 
-        const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
+        const userUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_USERS_TABLE}`;
+        const clientsUrl = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_CLIENTS_TABLE}`;
 
-        const response = await axios.get(url, {
+        // Validate uniqueId against User table
+        const userResponse = await axios.get(userUrl, {
           headers: {
             Authorization: `Bearer ${AIRTABLE_API_KEY}`,
           },
         });
 
-        setClients(response.data.records);
-        setFilteredClients(response.data.records); // Initially show all clients
+        const users = userResponse.data.records;
+        const user = users.find((record) => record.fields.uniqueId === uniqueId);
+
+        if (!user) {
+          alert("Invalid or unauthorized access.");
+          router.push("/signin");
+          return;
+        }
+
+        setIsValidUser(true);
+
+        // Fetch clients for valid users
+        const clientsResponse = await axios.get(clientsUrl, {
+          headers: {
+            Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+          },
+        });
+
+        setClients(clientsResponse.data.records);
+        setFilteredClients(clientsResponse.data.records); // Initially show all clients
       } catch (err) {
-        console.error("Error fetching clients:", err);
+        console.error("Error validating user or fetching clients:", err);
+        alert("Error fetching data. Please try again.");
+        router.push("/signin");
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchClients();
-  }, []);
+    validateUserAndFetchClients();
+  }, [uniqueId, router]);
 
   const handleTabChange = (status) => {
     setSelectedTab(status);
@@ -60,7 +91,6 @@ export default function Portal() {
 
       const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}/${clientId}`;
 
-      // Validate the new status
       const validatedStatus = validStatuses.find(
         (status) => status.toLowerCase() === newStatus.trim().toLowerCase()
       );
@@ -71,25 +101,19 @@ export default function Portal() {
         );
       }
 
-      console.log("Updating client ID:", clientId);
-      console.log("Validated status:", validatedStatus);
-
       const payload = {
         fields: {
           Status: validatedStatus,
         },
       };
 
-      const response = await axios.patch(url, payload, {
+      await axios.patch(url, payload, {
         headers: {
           Authorization: `Bearer ${AIRTABLE_API_KEY}`,
           "Content-Type": "application/json",
         },
       });
 
-      console.log("Airtable response:", response.data);
-
-      // Update the local state
       setClients((prevClients) =>
         prevClients.map((client) =>
           client.id === clientId
@@ -98,9 +122,17 @@ export default function Portal() {
         )
       );
     } catch (err) {
-      console.error("Error updating status in Airtable:", err.response?.data || err.message);
+      console.error("Error updating status:", err);
     }
   };
+
+  if (loading) {
+    return <p>Loading...</p>; // Show loading message while validating user
+  }
+
+  if (!isValidUser) {
+    return <p>Unauthorized access. Redirecting...</p>; // Show a message for invalid users
+  }
 
   return (
     <div>
@@ -131,6 +163,13 @@ export default function Portal() {
                   <th>Website</th>
                   <th>Email</th>
                   <th>Phone Number</th>
+                  <th>Industry</th>
+                  <th>SEO Score</th>
+                  <th>Critical Errors</th>
+                  <th>Site Speed</th>
+                  <th>Backlinks</th>
+                  <th>Traffic</th>
+                  <th>Recommended Services</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -150,6 +189,13 @@ export default function Portal() {
                     </td>
                     <td>{client.fields["Email"] || "N/A"}</td>
                     <td>{client.fields["Phone Number"] || "N/A"}</td>
+                    <td>{client.fields["Industry"] || "N/A"}</td>
+                    <td>{client.fields["SEO Score"] || "N/A"}</td>
+                    <td>{client.fields["Critical Errors"] || "N/A"}</td>
+                    <td>{client.fields["Site Speed"] || "N/A"}</td>
+                    <td>{client.fields["Backlinks"] || "N/A"}</td>
+                    <td>{client.fields["Traffic"] || "N/A"}</td>
+                    <td>{client.fields["Recommended Services"] || "N/A"}</td>
                     <td>
                       <select
                         value={client.fields["Status"] || "N/A"}

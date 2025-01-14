@@ -1,21 +1,21 @@
 /* Main Container */
 .portal-container {
-  max-width: 90%; /* Adjust for smaller screens */
-  margin: 2rem auto;
+  max-width: 100%; /* Full width */
+  margin: 4rem auto; /* Increased margin from the top */
   background-color: #ffffff;
-  padding: 1.5rem 1rem; /* Reduce padding for mobile */
+  padding: 2rem; /* Adjust padding for balanced spacing */
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Title Styling */
 .portal-title {
-  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #333333;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-transform: capitalize;
   border-bottom: 3px solid #00c4cc;
   display: inline-block;
@@ -26,12 +26,12 @@
 .client-table-container {
   overflow-x: auto;
   border-radius: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Table Styling */
 .client-table {
-  width: 100%;
+  width: 100%; /* Full width */
   border-collapse: collapse;
   background-color: #f8fafc;
   border-radius: 12px;
@@ -41,8 +41,8 @@
 .client-table th,
 .client-table td {
   text-align: left;
-  padding: 1rem; /* Adjust padding for smaller screens */
-  font-size: 0.9rem; /* Adjust font size for better readability on mobile */
+  padding: 1rem;
+  font-size: 1rem;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -74,7 +74,7 @@
 
 /* No Data Message */
 .no-data-message {
-  font-size: 1rem; /* Adjust font size for smaller screens */
+  font-size: 1rem;
   color: #777777;
   text-align: center;
   margin-top: 1.5rem;
@@ -94,49 +94,10 @@
   text-decoration: underline;
 }
 
-/* Status Badges */
-.status-badge {
-  display: inline-block;
-  padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
-  border-radius: 8px;
-  font-size: 0.8rem; /* Adjust font size for better readability on mobile */
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.status-badge.in-progress {
-  background-color: #ffb800;
-  color: #ffffff;
-}
-
-.status-badge.completed {
-  background-color: #28a745;
-  color: #ffffff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .client-table th,
-  .client-table td {
-      padding: 0.8rem;
-      font-size: 0.8rem;
-  }
-
-  .portal-title {
-      font-size: 1.8rem;
-  }
-
-  .portal-container {
-      padding: 1rem; /* Reduce padding further for smaller screens */
-  }
-}
-
 /* Tabs Styling */
 .tabs {
   display: flex;
-  flex-direction: column; /* Stack tabs vertically on small screens */
-  align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
   gap: 1rem;
 }
@@ -145,7 +106,7 @@
   background-color: #ffffff;
   color: #333333;
   border: 2px solid #00c4cc;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -162,7 +123,7 @@
 .status-dropdown {
   background-color: #ffffff;
   border: 1px solid #eaeaea;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border-radius: 8px;
   font-size: 0.9rem;
   font-family: 'Poppins', sans-serif;
@@ -175,20 +136,54 @@
   border-color: #00c4cc;
 }
 
-/* Adjustments for Smaller Screens */
-@media (max-width: 600px) {
+/* Remove Black Box */
+body {
+  background-color: #f8fafc; /* Light background to remove black box */
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .portal-container {
+    padding: 1.5rem;
+  }
+
   .portal-title {
-      font-size: 1.5rem; /* Further reduce title size */
+    font-size: 2rem;
   }
 
   .client-table th,
   .client-table td {
-      padding: 0.6rem;
-      font-size: 0.7rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tab-button {
-      font-size: 0.9rem; /* Adjust tab button size */
-      padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .portal-container {
+    padding: 1rem;
+  }
+
+  .portal-title {
+    font-size: 1.8rem;
+  }
+
+  .client-table th,
+  .client-table td {
+    padding: 0.6rem;
+    font-size: 0.8rem;
   }
 }

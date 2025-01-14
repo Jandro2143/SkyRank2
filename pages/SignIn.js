@@ -1,23 +1,22 @@
-import { useState } from 'react';
-import axios from 'axios';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function SignIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const router = useRouter(); // For navigation
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     try {
-      // Airtable API Configuration
-      const AIRTABLE_BASE = 'appjBE1cS049PHpg6'; // Replace with your Base ID
-      const AIRTABLE_TABLE = 'User'; // Replace with your Table Name
+      const AIRTABLE_BASE = "appjBE1cS049PHpg6"; // Replace with your Base ID
+      const AIRTABLE_TABLE = "User"; // Replace with your User Table Name
       const AIRTABLE_API_KEY =
-        'patu3ckkjrFVR855b.cfa6221346f5cc550a8d144f015ff8645ff0347e7dfb475ae3f852e139356223'; // Replace with your API Key
+        "patu3ckkjrFVR855b.cfa6221346f5cc550a8d144f015ff8645ff0347e7dfb475ae3f852e139356223"; // Replace with your API Key
 
       const url = `https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
 
@@ -28,8 +27,9 @@ export default function SignIn() {
         },
       });
 
-      // Check if user exists
       const users = response.data.records;
+
+      // Find the user with matching email and password
       const user = users.find(
         (record) =>
           record.fields.email?.toLowerCase().trim() === email.toLowerCase().trim() &&
@@ -37,24 +37,26 @@ export default function SignIn() {
       );
 
       if (user) {
+        const { uniqueId, Name } = user.fields;
+
+        if (!uniqueId) {
+          throw new Error("User does not have a valid uniqueId.");
+        }
+
         // Store user info in localStorage
         localStorage.setItem(
-          'loggedInUser',
-          JSON.stringify({
-            Name: user.fields.Name,
-            email: user.fields.email,
-            password: user.fields.password,
-          })
+          "loggedInUser",
+          JSON.stringify({ Name, email, uniqueId })
         );
 
-        // Redirect to the portal page
-        router.push('/portal');
+        // Redirect to the portal page with the uniqueId
+        router.push(`/portal/${uniqueId}`);
       } else {
-        setError('Invalid email or password.');
+        setError("Invalid email or password.");
       }
     } catch (err) {
-      console.error(err);
-      setError('Error connecting to Airtable.');
+      console.error("Sign-In Error:", err.message || err);
+      setError("An error occurred. Please try again.");
     }
   };
 

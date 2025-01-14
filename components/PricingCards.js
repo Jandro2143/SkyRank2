@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from 'next/link';
 
 export default function PricingCards({ title, plans }) {
   return (
@@ -17,7 +17,9 @@ export default function PricingCards({ title, plans }) {
               ))}
             </ul>
             <p className="best-for">Best For: {plan.bestFor}</p>
-            <button className="cta-button">Get Started</button>
+            <Link href="/contact">
+              <button className="cta-button">Get Started</button>
+            </Link>
           </div>
         ))}
       </div>

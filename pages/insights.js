@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 
 export default function Insights() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
   const insights = [
     {
       title: "5 Ways to Improve Your Website Performance",
@@ -10,6 +13,7 @@ export default function Insights() {
       date: "April 15, 2024",
       image: "https://via.placeholder.com/600x400",
       link: "#",
+      category: "Website Performance",
     },
     {
       title: "Why SEO is Crucial for Small Businesses",
@@ -17,6 +21,7 @@ export default function Insights() {
       date: "May 10, 2024",
       image: "https://via.placeholder.com/600x400",
       link: "#",
+      category: "SEO",
     },
     {
       title: "A Deep Dive into Google Ads Optimization",
@@ -24,6 +29,7 @@ export default function Insights() {
       date: "June 1, 2024",
       image: "https://via.placeholder.com/600x400",
       link: "#",
+      category: "Google Ads",
     },
     {
       title: "Case Study: Boosting E-commerce Sales by 200%",
@@ -31,37 +37,45 @@ export default function Insights() {
       date: "June 20, 2024",
       image: "https://via.placeholder.com/600x400",
       link: "#",
+      category: "Case Studies",
     },
   ];
 
+  const filteredInsights = activeCategory === "All"
+    ? insights
+    : insights.filter((post) => post.category === activeCategory);
+
   return (
     <div>
-      {/* Header */}
       <Header />
-
-      {/* Hero Section */}
       <section className="insights-hero">
         <div className="hero-content">
           <h1>Our Insights</h1>
-          <p>Stay informed with our latest articles, case studies, and industry tips to grow your business.</p>
+          <p>Explore articles, case studies, and expert tips to help grow your business.</p>
         </div>
       </section>
 
-      {/* Insights Section */}
+      <section className="insights-categories">
+        <div className="categories-container">
+          {["All", "Website Performance", "SEO", "Google Ads", "Case Studies"].map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={activeCategory === category ? "active" : ""}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </section>
+
       <section className="insights-section">
         <div className="insights-container">
-          {insights.map((post, index) => (
+          {filteredInsights.map((post, index) => (
             <div key={index} className="insight-card">
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={600} // Set width
-                height={400} // Set height
-                layout="intrinsic" // Maintain aspect ratio and intrinsic dimensions
-                priority={index === 0} // Prioritize loading the first image
-              />
               <div className="insight-details">
                 <p className="post-date">{post.date}</p>
+                <p className="category">{post.category}</p>
                 <h3>{post.title}</h3>
                 <p>{post.description}</p>
                 <a href={post.link} className="read-more">
@@ -72,8 +86,6 @@ export default function Insights() {
           ))}
         </div>
       </section>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

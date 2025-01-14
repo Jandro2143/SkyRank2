@@ -1,170 +1,194 @@
 /* Main Container */
 .portal-container {
-    max-width: 1200px;
-    margin: 3rem auto;
-    background-color: #ffffff;
-    padding: 2rem 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Title Styling */
-  .portal-title {
-    font-size: 2.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: #333333;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: capitalize;
-    border-bottom: 3px solid #00c4cc;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-  }
-  
-  /* Table Container */
-  .client-table-container {
-    overflow-x: auto;
-    border-radius: 12px;
-  }
-  
-  /* Table Styling */
-  .client-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #f8fafc;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  
+  max-width: 90%; /* Adjust for smaller screens */
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem; /* Reduce padding for mobile */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.portal-title {
+  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  border-bottom: 3px solid #00c4cc;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Table Container */
+.client-table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Table Styling */
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.client-table th,
+.client-table td {
+  text-align: left;
+  padding: 1rem; /* Adjust padding for smaller screens */
+  font-size: 0.9rem; /* Adjust font size for better readability on mobile */
+  font-family: 'Poppins', sans-serif;
+}
+
+.client-table th {
+  background-color: #00c4cc;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.client-table td {
+  color: #444444;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Alternating Row Colors */
+.client-table tr:nth-child(even) td {
+  background-color: #f4f8fb;
+}
+
+/* Hover Effect */
+.client-table tr:hover td {
+  background-color: #e8f6f8;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* No Data Message */
+.no-data-message {
+  font-size: 1rem; /* Adjust font size for smaller screens */
+  color: #777777;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Website Links */
+.website-link {
+  color: #00c4cc;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.website-link:hover {
+  color: #007d87;
+  text-decoration: underline;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
+  border-radius: 8px;
+  font-size: 0.8rem; /* Adjust font size for better readability on mobile */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.in-progress {
+  background-color: #ffb800;
+  color: #ffffff;
+}
+
+.status-badge.completed {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .client-table th,
   .client-table td {
-    text-align: left;
-    padding: 1.5rem;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+      padding: 0.8rem;
+      font-size: 0.8rem;
   }
-  
-  .client-table th {
-    background-color: #00c4cc;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+
+  .portal-title {
+      font-size: 1.8rem;
   }
-  
-  .client-table td {
-    color: #444444;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
+
+  .portal-container {
+      padding: 1rem; /* Reduce padding further for smaller screens */
   }
-  
-  /* Alternating Row Colors */
-  .client-table tr:nth-child(even) td {
-    background-color: #f4f8fb;
-  }
-  
-  /* Hover Effect */
-  .client-table tr:hover td {
-    background-color: #e8f6f8;
-    color: #333333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* No Data Message */
-  .no-data-message {
-    font-size: 1.2rem;
-    color: #777777;
-    text-align: center;
-    margin-top: 2rem;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Website Links */
-  .website-link {
-    color: #00c4cc;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .website-link:hover {
-    color: #007d87;
-    text-decoration: underline;
-  }
-  
-  /* Status Badges */
-  .status-badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    text-transform: capitalize;
-  }
-  
-  .status-badge.in-progress {
-    background-color: #ffb800;
-    color: #ffffff;
-  }
-  
-  .status-badge.completed {
-    background-color: #28a745;
-    color: #ffffff;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .client-table th,
-    .client-table td {
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  
-    .portal-title {
-      font-size: 2rem;
-    }
-  }
-  /* Tabs Styling */
+}
+
+/* Tabs Styling */
 .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column; /* Stack tabs vertically on small screens */
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tab-button {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #00c4cc;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #00c4cc;
+  color: #ffffff;
+}
+
+/* Dropdown Styling */
+.status-dropdown {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+  cursor: pointer;
+  width: 100%;
+}
+
+.status-dropdown:hover {
+  border-color: #00c4cc;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 600px) {
+  .portal-title {
+      font-size: 1.5rem; /* Further reduce title size */
   }
-  
+
+  .client-table th,
+  .client-table td {
+      padding: 0.6rem;
+      font-size: 0.7rem;
+  }
+
   .tab-button {
-    background-color: #ffffff;
-    color: #333333;
-    border: 2px solid #00c4cc;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 0.9rem; /* Adjust tab button size */
+      padding: 0.4rem 0.8rem;
   }
-  
-  .tab-button.active,
-  .tab-button:hover {
-    background-color: #00c4cc;
-    color: #ffffff;
-  }
-  
-  /* Dropdown Styling */
-  .status-dropdown {
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
-    color: #333333;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .status-dropdown:hover {
-    border-color: #00c4cc;
-  }
-  
+}

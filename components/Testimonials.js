@@ -20,13 +20,6 @@ export default function Testimonials() {
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <Image
-              src="/client1.jpg"
-              alt="Client 1"
-              className="testimonial-avatar"
-              width={80}
-              height={80}
-            />
             <div>
               <h3>Jane Smith</h3>
               <p>Senior Developer</p>
@@ -42,13 +35,6 @@ export default function Testimonials() {
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <Image
-              src="/client2.jpg"
-              alt="Client 2"
-              className="testimonial-avatar"
-              width={80}
-              height={80}
-            />
             <div>
               <h3>Tom Williams</h3>
               <p>Business Owner</p>
@@ -63,13 +49,6 @@ export default function Testimonials() {
           </p>
           <div className="star-rating">★★★★★</div>
           <div className="testimonial-info">
-            <Image
-              src="/client3.jpg"
-              alt="Client 3"
-              className="testimonial-avatar"
-              width={80}
-              height={80}
-            />
             <div>
               <h3>Michael Brown</h3>
               <p>CEO, StartUp Co.</p>

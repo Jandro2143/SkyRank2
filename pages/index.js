@@ -5,6 +5,8 @@ import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import { useState } from 'react';
 import ContactUs from '../components/ContactUs';
+import Link from 'next/link';
+
 
 export default function Home() {
   const [] = useState(null);
@@ -19,7 +21,9 @@ export default function Home() {
         <div className="hero-content">
           <h1>Transform Your Business with SEO & Google Ads</h1>
           <p>Drive targeted traffic, increase visibility, and maximize your ROI.</p>
-          <button>Contact Us Now</button>
+          <Link href="/contact">
+            <button>Contact Us Now</button>
+          </Link>
         </div>
         <div className="hero-video">
           <video src="/Comp 1_1_2_1.mp4" autoPlay loop muted playsInline />

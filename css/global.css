@@ -235,3 +235,33 @@ img {
         font-size: 0.8rem;
     }
 }
+
+/* Default mobile-first styles */
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  /* Tablet (min-width: 768px) */
+  @media (min-width: 768px) {
+    .container {
+      padding: 2rem;
+    }
+  
+    .pricing-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Desktop (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    .pricing-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
